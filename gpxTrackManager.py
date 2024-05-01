@@ -184,6 +184,7 @@ class GPXTrackManager:
                 newvl.updateFields()
                 for feature in vlayer.getFeatures():
                     pr.addFeatures([feature])
+                # Get rid of original GPX layer    
                 QgsProject.instance().removeMapLayers( [vlayer.id()] )
                 QgsProject.instance().addMapLayer(newvl)
                 #set it into edit mode
